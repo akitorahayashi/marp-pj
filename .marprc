@@ -1,0 +1,8 @@
+{
+  "theme": "uncover",
+  "html": true,
+  "allowLocalFiles": true,
+  "pdfOptions": {
+    "format": "A4"
+  }
+}

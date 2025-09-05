@@ -13,11 +13,11 @@ A Python project for creating presentation slides using Marp CLI.
 You can install `marp-cli` with Homebrew or npm.
 
 ```bash
-# Homebrew
-brew install marp-cli
-
 # npm
 npm install -g @marp-team/marp-cli
+
+# Homebrew
+brew install marp-cli
 ```
 
 ### Setup

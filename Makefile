@@ -11,9 +11,9 @@
 # Default target when 'make' is run without arguments
 .DEFAULT_GOAL := help
 
-# Specify the Python executable and main Streamlit file name
+# Specify the Python executable and main script file name
 PYTHON := ./.venv/bin/python
-STREAMLIT_APP_FILE := ./src/main.py
+MAIN_FILE_PATH := ./src/main.py
 
 # ==============================================================================
 # HELP
@@ -43,7 +43,12 @@ setup: ## Project initial setup: install dependencies and create .env file
 .PHONY: run
 run: ## Simply execute src/main.py
 	@echo "🚀 Executing src/main.py..."
-	@$(PYTHON) $(STREAMLIT_APP_FILE)
+	@$(PYTHON) $(MAIN_FILE_PATH)
+
+.PHONY: preview
+preview: ## Run a local server with live-reloading
+	@echo "👀 Starting preview server at http://localhost:8080 (Press Ctrl+C to stop)"
+	@$(PYTHON) src/main.py preview
 
 # ==============================================================================
 # CODE QUALITY
